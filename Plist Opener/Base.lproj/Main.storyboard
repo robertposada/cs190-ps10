@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KNA-Ed-0Cd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KNA-Ed-0Cd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -35,12 +35,35 @@
                                     <segue destination="c61-ct-CNb" kind="unwind" unwindAction="back:" id="nVu-ti-nXG"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lx3-fQ-o43">
+                                <rect key="frame" x="180" y="311" width="240" height="125"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLS-so-DKU">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="125"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="0.093322322275342873" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="HAT-ts-JYs"/>
+                                    <constraint firstItem="hLS-so-DKU" firstAttribute="width" secondItem="lx3-fQ-o43" secondAttribute="width" id="Jeb-4E-GH7"/>
+                                    <constraint firstItem="hLS-so-DKU" firstAttribute="centerX" secondItem="lx3-fQ-o43" secondAttribute="centerX" id="eWf-pG-mbd"/>
+                                    <constraint firstItem="hLS-so-DKU" firstAttribute="height" secondItem="lx3-fQ-o43" secondAttribute="height" id="jYt-vz-LHd"/>
+                                    <constraint firstItem="hLS-so-DKU" firstAttribute="centerY" secondItem="lx3-fQ-o43" secondAttribute="centerY" id="o5F-g8-g2Q"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GHl-ae-M7L" firstAttribute="centerX" secondItem="yh9-TU-gcq" secondAttribute="centerX" id="5As-nQ-PPI"/>
+                            <constraint firstItem="lx3-fQ-o43" firstAttribute="centerX" secondItem="yh9-TU-gcq" secondAttribute="centerX" id="5aF-Ni-4Rw"/>
                             <constraint firstItem="Fer-g2-jAN" firstAttribute="top" secondItem="GHl-ae-M7L" secondAttribute="bottom" constant="50" id="5yj-le-cUb"/>
                             <constraint firstItem="9fV-rk-e7W" firstAttribute="centerX" secondItem="yh9-TU-gcq" secondAttribute="centerX" id="GdG-71-sM9"/>
+                            <constraint firstItem="i1l-G1-40a" firstAttribute="top" secondItem="lx3-fQ-o43" secondAttribute="bottom" constant="100" id="JDa-24-tfi"/>
+                            <constraint firstItem="lx3-fQ-o43" firstAttribute="top" secondItem="Fer-g2-jAN" secondAttribute="bottom" constant="30" id="c1k-oa-Kaj"/>
                             <constraint firstItem="Fer-g2-jAN" firstAttribute="centerX" secondItem="yh9-TU-gcq" secondAttribute="centerX" id="eqH-qJ-tPg"/>
                             <constraint firstItem="GHl-ae-M7L" firstAttribute="top" secondItem="9fV-rk-e7W" secondAttribute="bottom" constant="50" id="hXw-G8-3CD"/>
                             <constraint firstItem="9fV-rk-e7W" firstAttribute="top" secondItem="gCz-b6-CNu" secondAttribute="bottom" constant="100" id="m7q-0f-LLH"/>
@@ -48,6 +71,8 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
+                        <outlet property="errorLabel" destination="hLS-so-DKU" id="IAA-c2-Mk9"/>
+                        <outlet property="errorView" destination="lx3-fQ-o43" id="wcP-Lw-ocq"/>
                         <outlet property="titleTextField" destination="GHl-ae-M7L" id="1Az-Wz-f6P"/>
                         <outlet property="view" destination="yh9-TU-gcq" id="Ecy-aV-iQ5"/>
                     </connections>
@@ -70,7 +95,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ekY-IW-weo" id="mmU-rK-wsa">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
